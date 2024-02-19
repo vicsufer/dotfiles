@@ -1,5 +1,4 @@
 vim.opt.guicursor = ""
-vim.opt.guifont="American Typewriter"
 
 vim.wo.number = true
 vim.wo.relativenumber = true
