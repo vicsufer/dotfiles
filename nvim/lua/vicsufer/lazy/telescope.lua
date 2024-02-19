@@ -21,7 +21,7 @@ return {
             local word = vim.fn.expand("<cWORD>")
             builtin.grep_string({ search = word })
         end)
-        vim.keymap.set('n', '<leader>ps', builtin.grep_files,{})
+        vim.keymap.set('n', '<leader>pg', builtin.live_grep,{})
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
     end
 }
