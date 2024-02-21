@@ -1,3 +1,4 @@
+vim.opt.shell = "/bin/zsh"
 vim.opt.guicursor = ""
 
 vim.wo.number = true
