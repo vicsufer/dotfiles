@@ -35,11 +35,11 @@ return {
                 "yamlls",
                 "rust_analyzer",
                 "tsserver",
+                "helm_ls",
                 "tailwindcss",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
-
                     require("lspconfig")[server_name].setup {
                         capabilities = capabilities
                     }
