@@ -33,7 +33,6 @@ return {
                 "jsonls",
                 "terraformls",
                 "yamlls",
-                "remark_ls",
                 "rust_analyzer",
                 "tsserver",
                 "tailwindcss",
