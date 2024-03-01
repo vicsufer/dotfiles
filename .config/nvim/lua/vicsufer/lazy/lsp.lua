@@ -68,7 +68,7 @@ return {
                 "prettier",
                 "stylua",
                 -- "luacheck",
-                "rustft",
+                -- "rustft", cannot locate properly
                 "yamllint",
                 "jsonlint",
                 "markdownlint",
