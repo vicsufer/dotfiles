@@ -67,7 +67,8 @@ return {
             ensure_installed = {
                 "prettier",
                 "stylua",
-                "luacheck",
+                -- "luacheck",
+                "rustft",
                 "yamllint",
                 "jsonlint",
                 "markdownlint",
