@@ -11,6 +11,7 @@ return {
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
+        "WhoIsSethDaniel/mason-tool-installer.nvim"
     },
 
     config = function()
@@ -29,6 +30,8 @@ return {
                 "lua_ls",
                 "bashls",
                 "dockerls",
+                "awk_ls",
+                "jqls",
                 "docker_compose_language_service",
                 "jsonls",
                 "terraformls",
@@ -58,6 +61,20 @@ return {
                         }
                     }
                 end,
+            }
+        })
+        require("mason-tool-installer").setup({
+            ensure_installed = {
+                "prettier",
+                "stylua",
+                "luacheck",
+                "yamllint",
+                "jsonlint",
+                "markdownlint",
+                "eslint_d",
+                "tflint",
+                "shellcheck",
+                "beautysh"
             }
         })
 
