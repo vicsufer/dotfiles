@@ -1,3 +1,6 @@
 [submodule "nvim-personal"]
 	path = ./config/nvim/lua/
 	url = ssh://git@github.com/vicsufer/nvim-personal
+[submodule ".config/nvim/lua/personal"]
+	path = .config/nvim/lua/personal
+	url = ssh://git@github.com/vicsufer/nvim-personal
