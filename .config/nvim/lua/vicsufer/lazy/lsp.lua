@@ -69,6 +69,7 @@ return {
             keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
         end
 
+        local util = require("lspconfig/util")
         require("fidget").setup({})
         require("mason").setup()
         require("mason-lspconfig").setup({
@@ -77,7 +78,6 @@ return {
                 "bashls",
                 "dockerls",
                 "awk_ls",
-                "jqls",
                 "docker_compose_language_service",
                 "jsonls",
                 "terraformls",
@@ -104,6 +104,33 @@ return {
                                 diagnostics = {
                                     globals = { "vim", "it", "describe", "before_each", "after_each" },
                                 }
+                            }
+                        }
+                    }
+                end,
+                ["rust_analyzer"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.rust_analyzer.setup {
+                        on_attach = function(client, bufnr)
+                            vim.lsp.inlay_hint.enable(bufnr)
+                        end,
+                        capabilities = capabilities,
+                        cmd = {
+                            "rustup", "run", "stable", "rust-analyzer"
+                        },
+                        filetypes = { "rust" },
+                        root = util.root_pattern("Cargo.toml"),
+                        settings = {
+                            lens = {
+                                enabled = true
+                            },
+                            checkOnSave = true,
+                            check = {
+                                enabled = true,
+                                command = "clippy",
+                                features = "all",
+                                all_targerts = true,
+                                extra_args = { "Dwarnings", "-Drust", "-2018-idioms", "-Drust-2021-compatibility", "-Adeprecated" },
                             }
                         }
                     }
