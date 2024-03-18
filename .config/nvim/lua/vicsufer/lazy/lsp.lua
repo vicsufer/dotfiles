@@ -75,6 +75,7 @@ return {
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
+                "gopls",
                 "bashls",
                 "dockerls",
                 "awk_ls",
@@ -106,6 +107,24 @@ return {
                                 }
                             }
                         }
+                    }
+                end,
+                ["gopls"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.lua_ls.setup {
+                        capabilities = capabilities,
+                        cmd = { "gopls" },
+                        root = { util.root_pattern("go.work", "go.mod", ".git") },
+                        settings = {
+                            gopls = {
+                                completeUnimported = true,
+                                usePlaceHolders = true,
+                                analyses = {
+                                    unusedParams = true
+                                }
+                            }
+                        },
+                        filetypes = { "go", "gomod", "gotmpl" }
                     }
                 end,
                 ["rust_analyzer"] = function()

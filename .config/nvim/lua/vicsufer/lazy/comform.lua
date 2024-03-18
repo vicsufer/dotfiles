@@ -10,6 +10,7 @@ return {
                 css        = { "prettier" },
                 json       = { "prettier" },
                 yaml       = { "yamlfix" },
+                go         = { "gopls" },
                 rust       = { "rustft" },
                 markdown   = { "prettier" },
                 terraform  = { "terraform_fmt" },
