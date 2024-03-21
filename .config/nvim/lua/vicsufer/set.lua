@@ -15,7 +15,7 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("XDG_DATA_HOME/nvim/undo")
+vim.opt.undodir = os.getenv("HOME") .. "/.config/nvim/undo"
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
