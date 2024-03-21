@@ -106,7 +106,9 @@ return {
                                     globals = { "vim", "it", "describe", "before_each", "after_each" },
                                 }
                             }
-                        }
+                        },
+                        root = { util.root_pattern(".luarc.json", ".luarc.jsonc", ".luacheckrc", ".stylua.toml", "stylua.toml", "selene.toml", "selene.yml") },
+                        filetypes = { "lua" }
                     }
                 end,
                 ["gopls"] = function()
