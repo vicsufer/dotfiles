@@ -113,20 +113,21 @@ return {
                 end,
                 ["gopls"] = function()
                     local lspconfig = require("lspconfig")
-                    lspconfig.lua_ls.setup {
+                    lspconfig.gopls.setup {
+                        on_attach = on_attach,
                         capabilities = capabilities,
                         cmd = { "gopls" },
                         root = { util.root_pattern("go.work", "go.mod", ".git") },
                         settings = {
                             gopls = {
                                 completeUnimported = true,
-                                usePlaceHolders = true,
+                                usePlaceholders = true,
                                 analyses = {
                                     unusedParams = true
                                 }
                             }
                         },
-                        filetypes = { "go", "gomod", "gotmpl" }
+                        filetypes = { "go", "gowork", "gomod", "gotmpl" }
                     }
                 end,
                 ["rust_analyzer"] = function()
