@@ -1,0 +1,36 @@
+tap "hashicorp/tap"
+tap "kubecolor/tap"
+
+brew "stow"
+
+brew "git"
+brew "fzf"
+brew "grep"
+brew "curl"
+brew "awscli"
+brew "nmap"
+brew "telnet"
+brew "openssl"
+brew "ripgrep"
+brew "watch"
+brew "websocat"
+brew "neovim"
+
+brew "go"
+brew "rust"
+brew "node"
+
+brew "docker"
+
+brew "kubernetes-cli"
+brew "kubecolor"
+brew "kubectx"
+brew "kubeseal"
+brew "k9s"
+brew "kind"
+brew "istioctl"
+brew "argocd"
+
+brew "jq"
+brew "yq"
+brew "yamllint"

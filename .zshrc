@@ -28,10 +28,6 @@ zi ice as'program' from'gh-r' pick'zoxide' \
   atpull'%atclone' src'init.zsh' nocompile'!'
 zi light ajeetdsouza/zoxide
 
-zi ice as'program' from'gh-r' \
-  bpick'nvim-macos.tar.gz' sbin'**/bin/nvim -> nvim'
-zi light neovim/neovim
-
 # Plugin 
 zi ice wait lucid atinit"ZI[COMPINIT_OPTS]=-C; zicompinit; zicdreplay"
 zi light z-shell/F-Sy-H
@@ -70,7 +66,7 @@ zi light zsh-users/zsh-completions
 zi ice atinit"zicompinit; zicdreplay"
 
 # Homebew
-eval(brew shellenv)
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # PATH
 export GOPATH=$HOME/go
