@@ -39,9 +39,8 @@ zi snippet OMZP::git
 zi snippet OMZP::kubectl
 zi snippet https://raw.githubusercontent.com/agkozak/zsh-z/master/zsh-z.plugin.zsh
 zi snippet https://raw.githubusercontent.com/Dbz/kube-aliases/master/kube-aliases.plugin.zsh
-zi snippet OMZP::docker
 
-# Completionsp#
+# Completions
 zi ice as"completion"
 zi snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
