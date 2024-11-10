@@ -67,6 +67,12 @@ zi ice atinit"zicompinit; zicdreplay"
 # Homebew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 # PATH
 export GOPATH=$HOME/go
 export PATH=$GOPATH:$PATH
@@ -75,3 +81,9 @@ export PATH=${KREW_ROOT:-HOME/.krew}/bin:$PATH
 
 # Load private zshrc
 [ -f "${HOME}/.config/zsh/init_private.zsh" ] && source "${HOME}/.config/zsh/init_private.zsh"
+
+
+# Aliases
+alias ls=eza
+alias cat=bat
+

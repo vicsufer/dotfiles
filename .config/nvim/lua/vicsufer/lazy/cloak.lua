@@ -22,6 +22,8 @@ return {
                     -- example: cloak_pattern = { ":.+", "-.+" } for yaml files.
                     cloak_pattern = "=.+"
                 },
+
+            vim.keymap.set({ "n" }, "<leader>c", vim.cmd.CloakToggle, { desc = "Toggle cloaking state" })
             },
         })
     end
