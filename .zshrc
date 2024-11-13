@@ -85,5 +85,5 @@ export PATH=${KREW_ROOT:-HOME/.krew}/bin:$PATH
 
 # Aliases
 alias ls=eza
-alias cat=bat
+alias cat="bat -p"
 
