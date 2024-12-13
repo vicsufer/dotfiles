@@ -23,7 +23,7 @@ return {
                     cloak_pattern = "=.+"
                 },
 
-            vim.keymap.set({ "n" }, "<leader>c", vim.cmd.CloakToggle, { desc = "Toggle cloaking state" })
+                vim.keymap.set({ "n" }, "<leader>c", vim.cmd.CloakToggle, { desc = "Toggle cloaking state" })
             },
         })
     end
