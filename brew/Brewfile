@@ -1,5 +1,6 @@
 tap "hashicorp/tap"
 tap "kubecolor/tap"
+tap "thought-machine/please"
 
 brew "stow"
 
@@ -18,6 +19,7 @@ brew "watch"
 brew "websocat"
 brew "neovim"
 brew "yaml-language-server"
+brew "please"
 
 brew "go"
 brew "rust"

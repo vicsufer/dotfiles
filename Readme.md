@@ -4,7 +4,7 @@
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew bundle -f brew/Brewfile
+brew bundle --file brew/Brewfile
 stow --target=$HOME .
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
